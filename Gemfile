@@ -8,7 +8,9 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'activeadmin'
 
- gem "meta_search",    '>= 1.1.0.pre'
+gem "meta_search",    '>= 1.1.0.pre'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Gems used only for assets and not required
 # in production environments by default.
