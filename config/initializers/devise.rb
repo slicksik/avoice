@@ -14,7 +14,8 @@ config.secret_key = '36862e53d0bbd703600c35b476ae6fe76d1d9ed33ee290b901d0beceaa7
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
-
+  require "omniauth-facebook"
+  config.omniauth :facebook, "661998223844699", "23e3b7be5a760c637954dee5872ebcd9"
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
