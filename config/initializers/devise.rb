@@ -15,6 +15,7 @@ config.secret_key = '36862e53d0bbd703600c35b476ae6fe76d1d9ed33ee290b901d0beceaa7
   # available as additional gems.
   require 'devise/orm/active_record'
   require "omniauth-facebook"
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
   config.omniauth :facebook, "661998223844699", "23e3b7be5a760c637954dee5872ebcd9"
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is

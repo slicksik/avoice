@@ -4,10 +4,11 @@
 <%= "Συνδεθήκατε ως:"%>
 <%= current_author.email %>
 <%= link_to 'Αποσύνδεση', destroy_author_session_path, :method => :delete	%>
-
+<%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
 <% else %>
 <%=  link_to 'Εγγραφή', new_author_registration_path  %>
 <%= link_to  'Σύνδεση', new_author_session_path%>
+<%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
 <% end %>
 
 <table>
