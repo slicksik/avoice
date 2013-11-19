@@ -3,10 +3,14 @@ Complaints::Application.routes.draw do
 
   resources :posts
 
-
+  devise_for :authors, :controllers => { :omniauth_callbacks => "authors/omniauth_callbacks" }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "posts#index"
+ 
+
+ 
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
