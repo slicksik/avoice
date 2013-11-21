@@ -1,8 +1,8 @@
-<h1>Listing from Post model</h1>
 
+<h1>Author Account </h1>
 <% if author_signed_in?%>
 <%= "Συνδεθήκατε ως:"%>
-<%= current_author.name %>
+<%= current_author.email %>
 <%= link_to 'Αποσύνδεση', destroy_author_session_path, :method => :delete	%>
 <%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
 <% else %>
@@ -10,7 +10,7 @@
 <%= link_to  'Σύνδεση', new_author_session_path%>
 <%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
 <% end %>
-
+<h1>Listing from Post model</h1>
 <table>
   <tr>
     <th>Title</th>
