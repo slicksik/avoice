@@ -4,8 +4,9 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+group :development do
 gem 'sqlite3'
+end
 gem 'activeadmin'
 
 gem "meta_search",    '>= 1.1.0.pre'
@@ -40,3 +41,7 @@ gem "jquery-rails", "< 3.0.0"
 
 # To use debugger
 # gem 'debugger'
+
+group :production do
+gem 'pg'
+end
