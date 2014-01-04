@@ -28,9 +28,9 @@
 <%= link_to 'Αποσύνδεση', destroy_author_session_path, :method => :delete	%>
 <%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
 <% else %>
-<%=  link_to 'Εγγραφή', new_author_registration_path , class: "btn btn-success" %>
-<%= link_to  'Σύνδεση', new_author_session_path, class: "btn btn-primary"%>
-<%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
+<%=  link_to 'Εγγραφή', new_author_registration_path , class: "btn btn-success clear_nav_links" %>
+<%= link_to  'Σύνδεση', new_author_session_path, class: "btn btn-primary clear_nav_links"%>
+<%= link_to "Σύνδεση με Facebook", author_omniauth_authorize_path(:facebook) , class: "btn btn-primary clear_nav_links"  %>
 <% end %>
 
       
