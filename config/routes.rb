@@ -1,6 +1,8 @@
 Complaints::Application.routes.draw do
 
 
+
+
   resources :posts
 
   devise_for :authors, :controllers => { :omniauth_callbacks => "authors/omniauth_callbacks" }

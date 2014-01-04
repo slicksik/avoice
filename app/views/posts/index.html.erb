@@ -1,15 +1,5 @@
 
-<h1>Author Account </h1>
-<% if author_signed_in?%>
-<%= "Συνδεθήκατε ως:"%>
-<%= current_author.email %>
-<%= link_to 'Αποσύνδεση', destroy_author_session_path, :method => :delete	%>
-<%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
-<% else %>
-<%=  link_to 'Εγγραφή', new_author_registration_path  %>
-<%= link_to  'Σύνδεση', new_author_session_path%>
-<%= link_to "Sign in with Facebook", author_omniauth_authorize_path(:facebook) %>
-<% end %>
+
 <h1>Listing from Post model</h1>
 <table>
   <tr>
@@ -32,6 +22,8 @@
 </table>
 
 <br />
+<% if author_signed_in?%>
 
 <%= link_to 'Νέο παράπονο', new_post_path %>
+<% end %>
 <%= link_to  'Admin Area', admin_dashboard_path %>
