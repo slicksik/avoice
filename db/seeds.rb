@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Complaint.create(title: 'Complaint1', content: 'Complaint1 content')
+categories = Category.create([{ name: 'Category1'}, { name: 'Category2'} , { name: 'Category3'}])
