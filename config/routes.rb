@@ -3,6 +3,9 @@ Complaints::Application.routes.draw do
 
 
 
+  resources :categories
+
+
   resources :complaints
 
 
