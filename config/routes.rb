@@ -1,15 +1,7 @@
 Complaints::Application.routes.draw do
-
-
-
-
-  resources :categories
-
-
-  resources :complaints
-
-
-  resources :posts
+resources :categories
+resources :complaints
+resources :posts
 
   devise_for :authors, :controllers => { :omniauth_callbacks => "authors/omniauth_callbacks" }
   devise_for :admin_users, ActiveAdmin::Devise.config
